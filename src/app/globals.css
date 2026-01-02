@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* BACKGROUND: A light, dusty sand color */
+    --background: 40 20% 96%; 
+    --foreground: 24 10% 10%;
+
+    /* CARDS: Slightly lighter than background to pop out */
+    --card: 40 20% 94%;
+    --card-foreground: 24 10% 10%;
+
+    /* PRIMARY COLOR: "Ravine Clay" (Deep Brown/Red) */
+    /* This changes ALL primary buttons to this color automatically */
+    --primary: 24 45% 30%; 
+    --primary-foreground: 60 9% 98%;
+
+    /* SECONDARY COLOR: "Chambal River" (Muted Blue) */
+    --secondary: 200 50% 40%;
+    --secondary-foreground: 60 9% 98%;
+
+    /* BORDERS: Dusty Grey */
+    --border: 30 10% 80%;
+    --input: 30 10% 80%;
+    --ring: 24 45% 30%; /* Focus ring is Clay color */
+    
+    --radius: 0.5rem; /* Soft rounded corners */
+  }
+
+  .dark {
+    /* DARK MODE: Night in the Ravines */
+    --background: 24 10% 10%;
+    --foreground: 40 20% 94%;
+    --primary: 40 20% 94%;
+    --primary-foreground: 24 45% 30%;
+    /* (Keeping it simple for now, focus on Light mode first) */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
